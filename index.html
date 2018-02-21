@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cartisan">
+  <head>
+    <meta charset="UTF-8">
+    <title>Assignment</title>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        
+  </head>
+  <body ng-controller="app">
+        
+      <div class="container">
+         <h1 style="text-align: center">Fuel prices in India</h1><br>
+            <div style="text-align: center;">
+              <input type="text" class="col-md-6" ng-model="city" placeholder="Enter your city" />
+              <br><br>
+              <button class="btn btn-primary" ng-click="myFunc()">Get Price</button>
+              <button class="btn btn-primary" ng-click="show=!show">Show Price</button>
+              <br><br>
+              <h4>{{text}}</h4>
+              <table class="table" ng-show="show" style="border: 3px solid black">
+                  <thead class="thead-dark" >
+                    <tr>
+                      <th scope="col">City</th>
+                      <th scope="col">Petrol</th>
+                      <th scope="col">Diesel</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{{city}}</td>
+                      <td>{{petrol}}</td>
+                      <td>{{diesel}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>  
+      </div>  
+        
+      <script src="app.js"></script>
+  </body>
+</html>
